@@ -1,0 +1,43 @@
+.navigator{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navigator a{
+    text-decoration: none;
+    padding-inline:10px;
+    font-size: 20px;
+    font-family:"aurora",Arial,sans-serif;
+}
+
+.socials img{
+    width: 20px;
+    height: 20px;
+    padding-inline:30px;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:20px;
+}
+
+
+@font-face {
+    font-family: 'aurora';
+    src: url('fonts/AURORA-PRO.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'footic';
+    src: url('fonts/Footic-Regular.otf') format('opentype');
+}

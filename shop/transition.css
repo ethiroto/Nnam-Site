@@ -1,0 +1,23 @@
+.shop-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+    cursor: pointer; /* Change cursor on hover to indicate item is clickable */
+}
+
+.shop-item:hover {
+    transform: scale(1.05); /* Slightly scale up the item */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2); /* Larger, more diffused shadow for depth */
+}
+
+
+.shop-item:active {
+    transform: scale(0.95); /* Scale down on click for a tactile feedback */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Slightly reduce the shadow for a "pressed" effect */
+}
+
+
+/* Optional: Improve the focus state for accessibility */
+.shop-item:focus {
+    outline: 2px solid #2DE3AE; /* Add a focus outline */
+    outline-offset: 2px; /* Space the outline a bit from the element */
+}
+

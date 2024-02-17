@@ -1,0 +1,122 @@
+.navigator a{
+    color:blanchedalmond;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+}
+
+.navigator a:hover{
+    color: #2DE3AE;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    min-height: 100vh; /* 100% of the viewport height */
+}
+
+.shop-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#music-shop, #merch-shop {
+    height: 100vh;
+    width: 50vw;
+    padding: 50px;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two columns of equal width */
+    gap: 20px; /* Increases gap for better spacing between items */
+    justify-items: center; /* Centers grid items horizontally */
+    align-items: start;
+}
+
+.shop-item {
+    width: 100%; /* Adjusted to use a percentage of the container */
+    max-width: 250px; /* Maximum size */
+    height: auto; /* Adjusted to maintain aspect ratio */
+    aspect-ratio: 1 / 1; /* Keeps item square */
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.shop-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 900px) {
+    .shop-grid {
+        grid-template-columns: 1fr; /* Switches to a single column */
+    }
+
+    .shop-item {
+        max-width: 50vw; /* Allows items to scale down with the viewport width */
+    }
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+      to right,
+      #b9acd1 0%,
+      #b9acd1 50%,
+      #162657 50%,
+      #162657 100%
+    );
+  }
+
+
+  #shop-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #444; /* Subtle border for a touch of detail */
+    border-radius: 15px; /* Rounded corners for a modern look */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Blur effect for the background seen through the popup */
+    -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+    padding: 20px; /* Add some padding around the content */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: soft shadow for more depth */
+    visibility: hidden;
+}
+
+
+#shop-popup iframe{
+    height: 500px;
+    width:350px;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* Changed from 'end' to 'flex-end' for broader compatibility */
+    min-height: 40px; /* Set a minimum height for visibility */
+}
+
+.x-btn {
+    cursor: pointer;
+    font-size: 30px;
+    color: #AAA; /* Lighter color for the button for contrast */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    margin-right:10px;
+}
+
+.x-btn-container:hover .x-btn {
+    color: #FFF; /* Brighter color on hover for visibility */
+    transform: rotate(90deg); /* Adds a cool twist effect on hover */
+}
+
+.x-btn-container {
+    cursor: pointer;
+}

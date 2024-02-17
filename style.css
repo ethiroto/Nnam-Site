@@ -1,0 +1,13 @@
+.navigator a{
+    text-decoration: none;
+    color: black;
+    padding-inline:10px;
+    font-size: 20px;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+}
+
+.navigator a:hover{
+    color: blanchedalmond;
+}
+
+
