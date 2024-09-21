@@ -24,6 +24,12 @@ body{
     height:85vh;
 }
 
+@media (max-width: 900px){
+   #art-scroller{
+    height:60vh;
+   } 
+}
+
 .art-container img{
     width: 500px;
     height: 500px;
@@ -129,7 +135,7 @@ body{
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     #popup {
         transform: scale(0.6);
         transform-origin: -68% -77%;
