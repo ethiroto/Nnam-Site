@@ -73,3 +73,9 @@ body{
     transform: rotate(-.5deg); 
   }
 }
+
+@media (max-width: 600px) {
+  .bio-img{
+    margin-top:70px;
+  }
+}
