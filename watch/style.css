@@ -1,5 +1,5 @@
 body {
-    background-color: #45275F;
+    background-color: #909998 ;
 }
 
 
@@ -36,8 +36,9 @@ body {
 }
 
 #main-video.small {
-    height: calc(1vw * 9 / 16);
-    width: 1vw;
+    height: calc(20vw * 9 / 16);
+    width: 20vw;
+    z-index:99;
 }
 
 
@@ -47,18 +48,20 @@ body {
     width: 100vw;      /* Full viewport width */
     height: 100vh;
     background-color: #000000;
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     transition: opacity 10s;
+    pointer-events: none;
 }
 
 .navigator a{
     color:blanchedalmond;
     font-family:"Helvetica Neue",Arial,sans-serif;
+    z-index: 2;
 }
 
 .navigator a:hover{
-    color: #2DE3AE;
+    color: #f5ecde;
 }
 
 @media screen and (max-width: 850px) {

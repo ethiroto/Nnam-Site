@@ -35,6 +35,10 @@ $('.hiro-audio').each(function() {
             }
         });
 
+        motherX.on('click', function(){
+            console.log('yo');
+                });
+
         // Use event delegation for dynamically added seek bar
         seekBar.on('input', function() {
             var duration = song.duration();

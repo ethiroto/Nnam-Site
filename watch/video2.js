@@ -21,7 +21,7 @@ setTimeout(function(){
         $(this).css('transition', 'none');
     });
 //Change this to change how long it stays
-}, 20000);
+}, 10000);
 
 function curtainReveal(){
     curtain.css('opacity', 0);

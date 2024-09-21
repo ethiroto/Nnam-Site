@@ -53,8 +53,10 @@ function attachClickHandler(index) {
         <h2 class="popup-title"> Song #${artArray[index]}</h2>
     <img class="popup-img" src="art/${artArray[index]}.jpg" alt="">
         <a class="stream-link" href="https://linktr.ee/nnamnnam" target="_blank">
-        stream the song!
-        </a><div class="hiro-audio">
+        Stream
+        </a>
+        <a class="stream-link" href="../shop/index.html">Purchase</a>
+        <div class="hiro-audio">
     <audio src="music/${parseInt(index)+1}.mp3"></audio>
     </div>`);
 
@@ -71,6 +73,13 @@ for (let i in artArray) {
 
 popup.on('click', '.x-btn', function(){
     popup.css('visibility', 'hidden');
+    //So that the audio can be stopped (this just stops all sitewide audio)
+    Howler.stop();
+});
+
+scroller.on('click', function(){
+        //So that the audio can be stopped (this just stops all sitewide audio)
+    Howler.stop();
 });
 
 

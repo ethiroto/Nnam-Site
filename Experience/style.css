@@ -1,0 +1,99 @@
+body{
+    background-color:#df8fa0 ;
+}
+
+.navigator a{
+    color:#FFD8B2;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+}
+
+.navigator a:hover{
+    color: #fff5eb;
+}
+
+@font-face {
+    font-family: 'sunflower';
+    src: url('../fonts/Sunflower.otf') format('opentype');
+}
+
+
+
+.poster-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top:30px;
+}
+
+.poster img{
+    width: 95%;
+    height: 95%;
+    object-fit:scale-down;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transitions */
+}
+
+.poster{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease; /* Smooth transition for transformations */
+}
+
+.poster:hover{
+    transform: scale(1.01);
+
+}
+
+
+.poster-text {
+    font-family: 'Printvetica';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1); /* Start with regular scale */
+    color: #b2ffff;
+    visibility: hidden;
+    font-size: 2vw;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+    transition: visibility 0s, opacity 0.3s linear, transform 0.3s ease; /* Transition for opacity and transform */
+    opacity: 0; /* Use opacity for smoother transitions */
+    cursor: pointer;
+}
+
+.poster:hover .poster-text {
+    visibility: visible;
+    opacity: 1; /* Fade in effect */
+    transform: translate(-50%, -50%) scale(1.1); /* Scale up effect for emphasis */
+}
+
+
+.poster:hover img {
+    filter: brightness(90%);
+}
+
+a{
+    text-decoration: none;
+
+}
+.bottom-text{
+    font-family: 'Printvetica';
+    color: #FFD8B2;
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    visibility: hidden;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .bottom-text {
+        visibility: visible;
+    }
+}

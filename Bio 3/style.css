@@ -1,0 +1,75 @@
+body{
+    background-color: #eadcbf;
+    overflow-y: scroll;
+}
+.navigator a{
+    color:#72716e;
+    font-family:Arial,sans-serif;
+}
+
+.navigator a:hover{
+    color: #949391;
+}
+
+.bio-title{
+    font-size: 60px;
+    padding-bottom: 20px;
+}
+
+
+.bio {
+    margin-top: 0%;
+    display: flex;
+    flex-direction: row;             /* Use flexbox for easy alignment */
+        /* Allow items to wrap to the next line */
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right:10%;
+  }
+  .bio-txt {
+    font-size: 1.50vw;
+    width:50%;
+    padding-top:30px;
+    font-family:'Inter';
+  }
+
+  .bio-title{
+    font-family:'Inter';
+  }
+  @media (max-width:1100px){
+    .bio-txt {
+      font-size: 2.4vw;
+    }
+  }
+  .bio-img {
+    display: flex; /* Make bio-img a flex container */
+    align-items: flex-start; /* Vertically center the image */
+    justify-content: center; /* Horizontally center the image */
+    width:50%;
+  }
+  
+  .bio-img img {
+    max-height: 40vw;
+    max-width:35vw;    
+    object-fit: contain; /* Or cover, depending on your preference */
+    margin:30px;    /* Maintain aspect ratio */
+    margin-left:34%;
+    padding-top:5%;
+  }
+
+.bio-title:hover{
+  animation: wiggle 2s infinite; /* Adjust duration and iteration as needed */
+  cursor: pointer;
+}
+
+@keyframes wiggle {
+  0%, 100% { 
+    transform: rotate(0); 
+  }
+  25% { 
+    transform: rotate(.5deg); 
+  }
+  75% { 
+    transform: rotate(-.5deg); 
+  }
+}

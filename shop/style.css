@@ -4,8 +4,14 @@
 }
 
 .navigator a:hover{
-    color: #2DE3AE;
+    color: #a0d6ff;
 }
+
+/*.socials img {
+    filter: brightness(1.5) invert(1); /* Increase brightness and invert colors 
+}
+*/
+
 
 *{
     padding: 0;
@@ -42,12 +48,20 @@ body {
     aspect-ratio: 1 / 1; /* Keeps item square */
     margin-bottom: 50px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    font-family: 'Apple-Garamond';
+    color:#ffebcd;
+    text-align: center;
 }
 
 .shop-item img {
-    width: 100%;
-    height: 100%;
+    width: 97%;
+    height: 97%;
     object-fit: contain;
+    margin-bottom:15px;
 }
 
 @media (max-width: 900px) {
@@ -72,22 +86,20 @@ body{
     );
   }
 
-
-  #shop-popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+#shop-popup {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
     transform: translate(-50%, -50%);
-    border: 2px solid #444; /* Subtle border for a touch of detail */
+    border: px solid #fff; /* Subtle border for a touch of detail */
     border-radius: 15px; /* Rounded corners for a modern look */
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    background-color: #ddd1f1; /* Semi-transparent white background */
     backdrop-filter: blur(10px); /* Blur effect for the background seen through the popup */
     -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
     padding: 20px; /* Add some padding around the content */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: soft shadow for more depth */
+    box-shadow: 0 4px 6px rgba(0.6,0,0.6,0.7); /* Optional: soft shadow for more depth */
     visibility: hidden;
 }
-
 
 #shop-popup iframe{
     height: 500px;
@@ -119,4 +131,53 @@ body{
 
 .x-btn-container {
     cursor: pointer;
+}
+
+
+.shop-header{
+    display: flex;
+    justify-content: center;
+    transform : translateY(-30px);
+    font-family:'Apple-Garamond';
+    color:#ffebcd;
+    
+}
+
+/*#merch-shop .shop-header{
+    color: #b9acd1;
+}
+
+#music-shop .shop-header{
+    color: #162657;
+}*/
+@font-face {
+    font-family: 'sunflower';
+    src: url('../fonts/Sunflower.otf') format('opentype');
+}
+
+@media (max-width: 600px) {
+    #shop-popup {
+        width: 300px; /* Adjust width to a percentage of the viewport width */
+        height: auto; /* Let the height adjust based on content */
+        padding: 10px; /* Reduce padding */
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Ensure it's centered */
+        border: 1px solid #fff; /* Adjust border as needed */
+    }
+
+    #shop-popup iframe {
+        width: 300px; /* Make iframe responsive to viewport width */
+        height: 450px; /* Adjust height based on content or set a specific height */
+        max-width: 350px; /* Optional: limit the maximum width */
+        padding: 0; /* Adjust padding as necessary */
+    }
+
+    .shop-header {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .shop-item {
+        font-size: 10px; /* Adjust shop item font size */
+    }
 }
