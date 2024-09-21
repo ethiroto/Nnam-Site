@@ -72,5 +72,13 @@ body {
 
 }
 
+@media (max-width: 600px){
+    #main-video.large {
+        height: auto;
+        width: auto;
+        transition: width 0s ease, height 0s ease; /* Apply transition to width and height */
+    }
+}
+
 
 
